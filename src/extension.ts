@@ -31,7 +31,7 @@ const runReferencingViewsQuery = async (context: SafeContext): Promise<void> => 
 
 const showErrorMessage = () => {
     vscode.window.showErrorMessage("Oops! Something went wrong with your database connection. Please check your connection settings and try again.");
-}
+};
 
 export function deactivate() {
 }
