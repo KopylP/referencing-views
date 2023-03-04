@@ -10,20 +10,24 @@ This is an extension for Azure Data Studio that solves the problem of identifyin
 
 ### Installation
 
-To install this extension, follow the steps below:
+## Manual Installation from VSIX File
 
-1. Open Azure Data Studio
-2. Click on the Extensions icon on the left-hand side navigation bar.
-3. In the search bar, type "Referencing Views"
-4. Select the extension from the list and click on "Install."
-5. Once the installation is complete, reload Azure Data Studio.
+To manually install this extension from a VSIX file, follow these steps:
+
+1. Download the VSIX file for the referencing-views extension from **install** folder.
+2. Open Azure Data Studio.
+3. Click on the Extensions icon on the left-hand side navigation bar.
+4. Select "Install from VSIX..." from the ellipsis menu on the top-right corner of the Extensions panel.
+5. Browse and select the downloaded VSIX file.
+6. Click on "Install" to install the extension.
+7. Once the installation is complete, reload Azure Data Studio to start using the extension.
 
 ### Usage
 
 To use this extension, follow the steps below:
 
 1. Connect to your MSSQL server in Azure Data Studio.
-2. Expand the Databases folder.
+2. Expand the Databases or Views folder.
 3. Right-click on a table or view that you want to see the referencing views for.
 4. Select "Show referencing views."
 5. A new query window will open up, and a query will be executed that shows you all the referencing views and their schemas.
