@@ -3,3 +3,4 @@ node_modules
 .ads-test/
 *.vsix
 !install/*.vsix
+.vscode/
