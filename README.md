@@ -2,7 +2,7 @@
 
 This is an extension for Azure Data Studio that solves the problem of identifying which views or tables are referencing a specific table or view. During the development process, when you want to change or drop a table or view, it's essential to understand which other views are using it, so you can plan accordingly. This extension makes it easy to view all the referencing views and schemas for a particular table or view.
 
-### Features
+## Features
 
 - The extension allows you to right-click on a table or view in Azure Data Studio and select "Show Referencing Views." 
 - Once you select the option, a new query window will open up, and a query will be executed that shows you all the referencing views and their schemas.
@@ -22,7 +22,7 @@ To manually install this extension from a VSIX file, follow these steps:
 6. Click on "Install" to install the extension.
 7. Once the installation is complete, reload Azure Data Studio to start using the extension.
 
-### Usage
+## Usage
 
 To use this extension, follow the steps below:
 
@@ -32,10 +32,10 @@ To use this extension, follow the steps below:
 4. Select "Show referencing views."
 5. A new query window will open up, and a query will be executed that shows you all the referencing views and their schemas.
 
-### Contributing
+## Contributing
 
 Contributions to this extension are welcome. If you find a bug or want to suggest an improvement, please submit a pull request.
 
-### License
+## License
 
 This extension is licensed under the [MIT License](https://opensource.org/licenses/MIT).
