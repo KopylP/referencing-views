@@ -2,12 +2,10 @@
 
 import * as vscode from 'vscode';
 import * as azdata from 'azdata';
-import QueryProviders, { AvailableProviders, checkIsValidAvailableProvider as checkIsAvailableProvider } from './queries/query-provider';
+import QueryProviders from './queries/query-provider';
 import ObjectInfo from './queries/object-info';
-import RequiredBy from './utility-types/required-by';
-
-type ContextSave = RequiredBy<azdata.ObjectExplorerContext, 'connectionProfile' | 'nodeInfo'>
-    & { connectionProfile: azdata.IConnectionProfile & { providerName: AvailableProviders } };
+import { isConnectionCorrect } from './helpers/helpers';
+import { ContextSave as SafeContext } from './types/types';
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('referencing-views.show', async (context: azdata.ObjectExplorerContext) => {
@@ -23,12 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     }));
 }
 
-export const isConnectionCorrect = (context: azdata.ObjectExplorerContext): context is ContextSave =>
-    typeof context?.connectionProfile?.providerName !== 'undefined'
-    && typeof context?.nodeInfo?.label !== 'undefined'
-    && checkIsAvailableProvider(context.connectionProfile.providerName);
-
-const runReferencingViewsQuery = async (context: ContextSave): Promise<void> => {
+const runReferencingViewsQuery = async (context: SafeContext): Promise<void> => {
     const query = QueryProviders[context.connectionProfile.providerName]
         .getReferencingViewsQuery(new ObjectInfo(context.nodeInfo.label));
     const document = await azdata.queryeditor.openQueryDocument({ content: query });
