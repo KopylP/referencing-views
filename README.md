@@ -8,9 +8,9 @@ This is an extension for Azure Data Studio that solves the problem of identifyin
 - Once you select the option, a new query window will open up, and a query will be executed that shows you all the referencing views and their schemas.
 - This extension currently supports only the MSSQL provider.
 
-### Installation
+## Installation
 
-## Manual Installation from VSIX File
+### Manual Installation from VSIX File
 
 To manually install this extension from a VSIX file, follow these steps:
 
