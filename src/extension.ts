@@ -5,7 +5,7 @@ import * as azdata from 'azdata';
 import QueryProviders from './queries/query-provider';
 import ObjectInfo from './queries/object-info';
 import { isConnectionCorrect } from './helpers/helpers';
-import { ContextSave as SafeContext } from './types/types';
+import { SafeContext as SafeContext } from './types/types';
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('referencing-views.show', async (context: azdata.ObjectExplorerContext) => {
