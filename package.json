@@ -3,7 +3,7 @@
 	"displayName": "Referencing Views",
 	"description": "Referencing Views Extension for Azure Data Studio helps developers identify which views or tables are referencing a specific table or view. This extension allows you to view all the referencing views and schemas for a particular table or view in Azure Data Studio.",
 	"publisher": "Petro Kopyl",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"url": "https://github.com/KopylP/referencing-views",
 		"type": "git"
